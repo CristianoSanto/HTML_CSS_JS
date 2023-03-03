@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>      
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nomes Aleatórios</title>
+    
+    <style>
+  h2 {
+  display: flex;
+  background: salmon;
+  padding: 10px;
+  }
+  
+  button {
+  background-color: #4CAF50; /* cor de fundo */
+  border: none; /* sem borda */
+  color: white; /* cor do texto */
+  padding: 10px 20px; /* espaço interno */
+  text-align: center; /* alinhamento do texto */
+  text-decoration: none; /* sem decoração */
+  display: inline-block; /* exibir como bloco */
+  font-size: 16px; /* tamanho da fonte */
+  margin: 10px 0; /* espaço externo */
+  cursor: pointer; /* cursor de mão ao passar */
+  border-radius: 4px; /* arredondamento de bordas */
+}
+
+        
+        
+    </style>
+  </head>
+  
+  
+  <body>
+    <h2>Gerador de Nomes Aleatórios</h2>
+    <button onclick="gerarNome()">Gerar Nome</button>
+    <br>
+    <p id="nomeGerado"></p>
+    <script>
+      const nomes = ["Miguel", "Sophia", "Davi", "Alice", "Arthur", "Julia", "Pedro", "Isabella", "Gabriel", "Manuela", "Bernardo", "Laura", "Lucas", "Valentina", "Enzo", "Giovanna", "Matheus", "Beatriz", "Rafael", "Maria, Luiza", "Heitor", "Lara", "Felipe", "Maria Eduarda", "João", "Livia", "Henrique", "Mariana", "Guilherme", "Helena"];
+      
+      const sobrenomes = ["Silva", "Santos", "Costa", "Pereira", "Carvalho", "Ferreira", "Oliveira", "Almeida", "Souza", "Lima", "Rodrigues", "Freitas", "Castro", "Mendes", "Gomes", "Vieira", "Nogueira", "Marques", "Ribeiro", "Campos", "Fernandes", "Cardoso", "Fonseca", "Monteiro", "Batista", "Gonçalves", "Barbosa", "Moura", "Teixeira", "Lopes"];
+      
+      function gerarNome() {
+        // Escolhe um nome e um sobrenome aleatório da lista
+        const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+        const sobrenomeAleatorio = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+        
+        // Exibe o nome gerado na página
+        document.getElementById("nomeGerado").textContent = `Nome gerado: ${nomeAleatorio} ${sobrenomeAleatorio}.`;
+      }
+    </script>
+  </body>
+</html>
